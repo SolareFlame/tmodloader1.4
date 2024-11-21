@@ -35,11 +35,6 @@ services:
       # - "/path/to/config/config.txt:/root/terraria-server/serverconfig.txt"
     networks:
       - coolify
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.tmodloader.entrypoints=http
-      - traefik.http.routers.tmodloader.rule=Host(`stellardev.fr`)
-      - traefik.http.services.tmodloader.loadbalancer.server.port=7777
 networks:
   coolify:
     external: true
